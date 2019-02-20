@@ -1,0 +1,1 @@
+select * from LKM_Kanban_Scan where fExecKanbanNo like '%S%' AND fCreatedOn >'2019-01-17 14:20' AND fProTecName ='ดýปุสี'
