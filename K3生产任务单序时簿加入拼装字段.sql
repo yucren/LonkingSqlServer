@@ -110,7 +110,7 @@ yuchengren.已拼装数据 AS 已拼装数据 from ICMO v1 INNER JOIN MESWorkPinZhuangStat
 
 
  SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
-select top 40 
+select 
 t45.FICMOInterID AS FICMOInterID,
 t10.FName AS FCustIDName,
 v1.FCustID AS FCustID,
@@ -172,4 +172,4 @@ yuchengren.已拼装数据 AS 已拼装数据 from ICMO v1 LEFT OUTER JOIN MESWorkPinZhuan
  LEFT OUTER JOIN PPBOM t45 ON   v1.FInterID = t45.FICMOInterID  AND t45.FICMOInterID<>0 
  LEFT OUTER JOIN v_ICTransType t1 ON   v1.FTranType = t1.FID  AND t1.FID<>0 
  LEFT OUTER JOIN vw_ICMOStatus t60 ON   v1.FInterID = t60.FInterID  AND t60.FInterID<>0 
- where  (v1.FInterID=2824533) order by  v1.FInterID
+WHERE yuchengren.已拼装数据 IS NOT NULL  order by  v1.FInterID
